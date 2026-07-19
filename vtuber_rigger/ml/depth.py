@@ -41,7 +41,7 @@ def estimate_depth(image_path: str, layer_masks: Optional[dict[str, np.ndarray]]
             # Marigold implementation would go here.
             # Since we don't have the weights/model in the current env, 
             # we fall back to the OpenCV method unless specifically configured.
-            pass
+            use_torch = False
         except Exception:
             use_torch = False
 
